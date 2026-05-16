@@ -23,6 +23,7 @@ export default function Main() {
             })
             .catch(err => {
                 setError(err.message)
+                setCountries([])
                 setLoading(false)
             })
     }, [])
@@ -75,7 +76,7 @@ export default function Main() {
 
             {!loading && !error && countries.slice(0, 10).map(country => (
                 <CountryItem
-                    key={country.name.common}
+                    key={country.name?.common}
                     country={country}
                 />
             ))}
