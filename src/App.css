@@ -1,3 +1,21 @@
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -27,16 +45,16 @@
     background: linear-gradient(90deg, #0b0b0b 1.18%, #0d1518 100%);
     color: white;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer>p {
-    font-size: 1.25rem;
-    margin-right: auto;
-    color: white;
-}
-
-main {
-    padding: 20px;
+    font-size: 0.85rem;
+    color: #cfcfcf;
+    text-align: center;
+    margin: 0;
 }
 
 .country-card {
@@ -45,4 +63,22 @@ main {
     padding: 15px;
     margin-bottom: 15px;
     background-color: #f5f5f5;
+}
+
+form input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+form button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #212b2e;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
