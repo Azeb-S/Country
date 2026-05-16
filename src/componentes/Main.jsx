@@ -54,13 +54,7 @@ export default function Main() {
 
     }
 
-    if (loading) {
-        return <main><h2>Loading countries</h2></main>
-    }
 
-    if (error) {
-        return <main><h2>Error: {error}</h2></main>
-    }
 
     return (
         <main>
@@ -75,8 +69,11 @@ export default function Main() {
                     } />
                 <button>Search</button>
             </form>
+            {loading && <h2>Loading countries</h2>}
 
-            {countries.slice(0, 10).map(country => (
+            {error && <h2>Error: {error}</h2>}
+
+            {!loading && !error && countries.slice(0, 10).map(country => (
                 <CountryItem
                     key={country.name.common}
                     country={country}
